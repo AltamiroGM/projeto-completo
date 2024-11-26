@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev News</title>
+    <link rel="icon" href="img/dev_news_initials_32x32_white_bg.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(235, 234, 234);
+            background: linear-gradient(135deg, rgb(235, 234, 234), rgb(220, 220, 220));
+        }
+
+        .fundo {
+            background-image: url(img/conexao3.jfif);
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-position: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nome {
+            background-color: rgb(96, 104, 218);
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            box-shadow:  0 10px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .frase {
+            color: azure;
+            font-family: sans-serif;
+            margin: 3px;
+        }
+
+        .menus {
+            padding-top: 20px;           
+            margin-bottom: 50px;
+            background-color: rgb(237, 240, 240);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-left: 15px;
+            margin-right: 15px;
+            padding-bottom: 20px;
+        }
+       
+
+        
+        .osmenus{
+             display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+
+        .menu1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 12px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            box-shadow: 0 2px 2px;
+            height: auto; 
+        
+        }
+
+        .menu1 > li {
+            position: relative;
+            padding: 15px 20px; 
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .menu1 > li:last-child {
+            border-bottom: none;
+        }
+
+        .menu1  li a {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            width: 100%;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 300px; 
+            background-color: rgb(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 12px;
+            z-index: 1000;
+        }
+
+        .submenu li {
+            padding: 10px 0;
+            border-bottom: 1px solid black;
+        }
+
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+
+        .submenu a {
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+
+        .submenu li:hover {
+            background-color: rgb(205, 205, 205);
+            border-radius: 12px;
+        }
+
+        .dropdown:hover .submenu  {
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .seta{
+            width: 15px;
+        }
+        .dropdown{
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+        .dropdown:hover .seta2{
+            display:initial;
+        }
+        .dropdown:hover .seta{
+            display: none;
+        }
+        .seta2{
+            width: 15px;
+            display: none;
+            padding-left: 5px;
+            vertical-align: middle;
+            padding-top: 2px;
+        }
+        h1, h2, h3{
+            font-family: sans-serif;
+        }
+        .inicio{
+            text-align: center;
+            padding: 5px 50px 0 50px;
+        }
+        .topico{
+            padding-left: 40px;
+        }
+        .newstitle{
+            padding-left: 30px;
+        }
+        .news{
+            padding: 10px 40px 30px 25px;
+        }
+        .botaoig{
+          padding: 0px 20px;  
+            border-radius: 12px; 
+            border: 2px solid  rgb(114, 121, 224); 
+            background-color:  rgb(96, 104, 218); 
+            color: white;
+            cursor: pointer; 
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+         }
+         .botaoig:hover {
+      background-color: #c5c7f3; 
+    }
+    .ig{
+      margin: 30px 0px 30px 30px;
+      justify-content: space-around;
+    }
+    .rodape{
+            background-image: url(img/about.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;    
+            align-items: center;
+            bottom: 0;
+            width: 100%;
+            padding: 30px 0px 30px 0px;
+            margin-top: 70px;
+    }
+    .top {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 12px; 
+      border: 2px solid  rgb(114, 121, 224);;
+      background-color: rgb(96, 104, 218); 
+      color: white; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center;
+      justify-content: center; 
+      gap: 10px; 
+      margin:5px 0px 5px 20px;     
+    }
+    .top:hover {
+      background-color: #c5c7f3; 
+    }
+    .buttonsimg {
+      width: 20px; 
+      height: auto; 
+    }
+    </style>
+</head>
+<body>
+<div class="fundo">
+  <div class="nome">
+    <img src="img/site name_titulo.png" alt="Logo Dev News">
+    <h2 class="frase"><strong>UM MUNDO EM POUCOS PIXEIS</strong></h2>
+  </div>
+</div>
+
+<div class="menus">
+<h3 class="inicio"> Aqui iremos abordar diversas notícias relacionadas a geopolítica e economia, abordadando diversos temas que nos afetam diretamente e que são de importante conhecimento. O contéudo é direto e de fácil entendimento pra evitar a tomada de grande tempo do leitor, deixando claro o que deve passar, veja os tópicos a seguir:</h3>
+<h1 class="topico">Tópicos:</h1>
+<div class="osmenus">
+<nav class="menu">
+    <ul class="menu1">
+        <li class="dropdown">
+            <strong>Objetivos de Desenvolvimento</strong> <img src="img/angulo-direito.png" class="seta"> <img src="img/angulo-para-baixo.png" class="seta2">
+            <ul class="submenu">
+                <li><a href="info.html"><strong>ODS 8</strong></a></li>
+                <li><a href="#"><strong>ODS 9</strong></a></li>
+                <li><a href="#"><strong>ODS 10</strong></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<nav class="menu">
+    <ul class="menu1">
+        <li class="dropdown">
+            <strong>Economia</strong> <img src="img/angulo-direito.png" class="seta"> <img src="img/angulo-para-baixo.png" class="seta2">
+            <ul class="submenu">
+                <li><a href="#"><strong>Continente Americano</strong></a></li>
+                <li><a href="#"><strong>Europa</strong></a></li>
+                <li><a href="#"><strong>Ásia</strong></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<nav class="menu">
+    <ul class="menu1">
+        <li class="dropdown">
+            <strong>Geopolítica</strong> <img src="img/angulo-direito.png" class="seta"> <img src="img/angulo-para-baixo.png" class="seta2">
+            <ul class="submenu">
+                <li><a href="#"><strong>Eleições Americanas</strong></a></li>
+                <li><a href="#"><strong>Guerra da Ucrânia</strong></a></li>
+                <li><a href="#"><strong>Oriente Médio</strong></a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+</div>
+<div class="menus">
+<h1 class="topico">Notícias Rápidas:</h1>
+
+<h2 class="newstitle">ODS 8</h2>
+<h3 class="news"> A ODS 8 visa promover o crescimento econômico inclusivo e sustentável, emprego pleno e produtivo, e trabalho decente para todos. Ela incentiva inovações, a formalização de empresas e a erradicação do trabalho infantil, fortalecendo a economia global com justiça social.</h3>
+
+<h2 class="newstitle">ODS 9</h2>
+<h3 class="news"> A ODS 9 promove infraestrutura resiliente, industrialização inclusiva e sustentável, além de fomentar a inovação. Ela busca fortalecer economias, reduzir desigualdades tecnológicas e estimular o desenvolvimento sustentável em todo o mundo.</h3>
+
+<h2 class="newstitle">ODS 10</h2>
+<h3 class="news"> A ODS 10 busca reduzir as desigualdades dentro e entre os países. Ela promove inclusão social, econômica e política, garantindo oportunidades iguais e combatendo discriminações em todas as suas formas.</h3>
+
+<h2 class="newstitle">Economia: Continente Americano</h2>
+<h3 class="news">A América Latina e o Caribe devem crescer apenas 1,9% em 2024, impactados por juros altos e baixo dinamismo global. Na América do Norte, o crescimento também desacelera, com desafios econômicos e climáticos sendo pontos críticos para ambas as regiões.</h3>
+
+<h2 class="newstitle">Economia: Europa</h2>
+<h3 class="news">A zona do euro experimenta desaceleração econômica, com retração em setores-chave. A inflação está diminuindo, mas ainda acima da meta do BCE, que mantém política monetária restritiva. A previsão de crescimento para 2024 é de 0,7%, refletindo as incertezas globais e o impacto de condições financeiras mais rígidas.</h3>
+
+<h2 class="newstitle">Economia: Ásia</h2>
+<h3 class="news">A Ásia-Pacífico deve crescer 4,6% em 2024, impulsionada pela recuperação de setores industriais e pela liderança da Índia, com 6,6% de expansão prevista. No entanto, a desaceleração na China e a alta dívida privada podem limitar o ritmo de avanço na região.</h3>
+
+<h2 class="newstitle">Eleições Americanas</h2>
+<h3 class="news">Donald Trump foi eleito presidente dos Estados Unidos, derrotando Kamala Harris em uma disputa acirrada. Ele garantiu 312 votos no colégio eleitoral, tornando-se o segundo presidente na história dos EUA a conquistar um segundo mandato não consecutivo. As eleições também renovaram o Congresso, onde os republicanos obtiveram ganhos significativos.</h3>
+
+<h2 class="newstitle">Guerra da Ucrânia</h2>
+<h3 class="news">A guerra na Ucrânia intensificou-se em novembro de 2024, com ataques ucranianos atingindo bases russas em Belgorod e Moscou respondendo com ameaças nucleares. O uso de mísseis de longo alcance fornecidos pelos EUA marcou uma nova fase no conflito. Enquanto a Ucrânia se mantém firme na contraofensiva, líderes globais, incluindo na cúpula do G20, buscam evitar uma escalada maior do conflito.</h3>
+
+<h2 class="newstitle">Geopolítica: Oriente Médio</h2>
+<h3 class="news">A situação geopolítica no Oriente Médio continua crítica, com o conflito entre Israel e grupos como Hamas e Hezbollah entrando em escalada perigosa. Mais de 42 mil mortes foram registradas desde o início dos combates em 2023, que também envolvem o Irã e outros países da região. Essa tensão afeta mercados globais, especialmente o de petróleo, com aumentos no preço devido à possibilidade de bloqueios em rotas estratégicas como o Estreito de Ormuz</h3>
+</div>
+<div class="ig">
+    <button class="botaoig" onclick="window.open('https:/www.instagram.com/tamirobas77/', '_blank')">
+    <h2>Contate nos</h2>
+    <img  src="img/instagram.png" class="buttonsimg" >
+    </button>
+ </div>
+ 
+    <div class="rodape">
+      <button onclick="window.location.href='aboutus1.html'" class="top"> Sobre mim
+          <img src="img/confuso.png" class="buttonsimg" alt="Ícone">
+        </button>
+    </div>
+</body>
+</html>
